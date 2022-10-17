@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div className='header bg-yellow-500'>
       <Link className='text-4xl font-bold text-blue-600 flex' to='/home'>
-        <img className='w-12' src='./favicon.png' alt='' />
+        <img className='w-12' src='./favicon.ico' alt='' />
         uizUltra
       </Link>
       <nav className='space-x-8 font-bold mt-3 text-blue-700 text-lg header-btn'>
