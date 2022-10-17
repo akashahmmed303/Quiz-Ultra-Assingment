@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-// import Parser from 'html-react-parser';
+import Parser from 'html-react-parser';
 import Option from '../Option/Option';
 function QuizCart({
   options,
@@ -14,7 +14,7 @@ function QuizCart({
   return (
     <div className='border border-yellow-400 p-8 rounded-md text-slate-300'>
       <h4 className='text-xl mb-4 font-medium text-slate-200'>
-        {question}{' '}
+        {Parser(question)}{' '}
         <button>
           {clicked ? (
             <svg
