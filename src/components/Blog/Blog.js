@@ -1,11 +1,10 @@
 import React from 'react';
-import Header from '../Header/Header';
 
 const Blog = () => {
   return (
     <div>
       <section>
-        <div className='font-sans hover:font-serif  bg-gradient-to-r from-cyan-500 to-blue-500 text-2xl p-12 rounded-full m-12'>
+        <div className='font-sans hover:font-serif  bg-gradient-to-r from-cyan-500 to-blue-500 text-2xl p-12 rounded-3xl m-12'>
           <h2 className='text-3xl font-semibold '>
             {' '}
             #1 What is the purpose of React Router?
@@ -19,7 +18,7 @@ const Blog = () => {
           </p>
         </div>
 
-        <div className='font-sans hover:font-serif  bg-gradient-to-r from-purple-500 to-pink-500 text-2xl p-12 rounded-full m-12'>
+        <div className='font-sans hover:font-serif  bg-gradient-to-r from-purple-500 to-pink-500 text-2xl p-12 rounded-3xl m-12'>
           <h2 className='text-3xl font-semibold '>
             {' '}
             #2 How does context API work?
@@ -37,7 +36,7 @@ const Blog = () => {
           </p>
         </div>
 
-        <div className='font-sans hover:font-serif  bg-gradient-to-r from-violet-500 to-fuchsia-500 text-2xl p-12 rounded-full m-12'>
+        <div className='font-sans hover:font-serif  bg-gradient-to-r from-violet-500 to-fuchsia-500 text-2xl p-12 rounded-3xl m-12'>
           <h2 className='text-3xl font-semibold '> #3 Explain useRef hook?</h2>
           <p className='mt-5 text-gray-800'>
             When we need to get a reference of a DOM element we use the useRef

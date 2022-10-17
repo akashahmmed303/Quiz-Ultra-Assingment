@@ -11,7 +11,7 @@ import {
 function Statistics() {
   const { data } = useLoaderData();
   return (
-    <div className='container min-h-screen pt-16 flex justify-center'>
+    <div className='container min-h-screen pt-40 flex justify-center'>
       <LineChart
         width={600}
         height={300}
