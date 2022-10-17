@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 22px;
+}
+.header-btn :hover {
+  background-color: lightcoral;
+  color: whitesmoke;
+}
+
+.quizUltra {
+  justify-content: space-between;
+}
