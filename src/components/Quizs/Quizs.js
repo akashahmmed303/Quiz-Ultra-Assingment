@@ -2,13 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import Correct from '../Correct/Correct';
-import InCorrect from '../InCorrect/InCorrect';
 import QuizCart from '../QuizCart/QuizCart';
 import 'react-toastify/dist/ReactToastify.css';
 
 function Quizs() {
   const [correct, setCorrect] = useState(0);
-  const [inCorrect, setInCorrect] = useState(0);
   const [selected, setSelected] = useState({});
   const [correctAnswers, setCorrectAnswers] = useState([]);
   const { data } = useLoaderData();
@@ -85,7 +83,7 @@ function Quizs() {
 
   return (
     <div className='container relative bg-state-800 '>
-      <h1 className='mb-8 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-black text-center'>
+      <h1 className='mb-8 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white text-center'>
         {name}
       </h1>
       <div className='grid lg:grid-cols-2 lg:gap-x-8 gap-y-8 '>

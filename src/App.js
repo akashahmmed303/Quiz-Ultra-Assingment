@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Blog from './components/Blog/Blog';
@@ -53,34 +54,40 @@ function App() {
         },
       ],
     },
-
-    // {
-    //   path: '',
-    //   element: <Layouts></Layouts>,
-    //   children: [
-    //     {
-    //       path: '',
-    //       // loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
-    //       element: <Home></Home>,
-    //     },
-    //     {
-    //       path: '/quiz',
-    //       // loader: ({ params }) =>
-    //       //   fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`),
-    //       element: <Quizs></Quizs>,
-    //     },
-    //     {
-    //       path: '/blog',
-    //       element: <Blog></Blog>,
-    //     },
-    //     {
-    //       path: '/Statistics',
-    //       // loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
-    //       element: <Statistics></Statistics>,
-    //     },
-    //   ],
-    // },
   ]);
+
+  useEffect(() => {
+    document.getElementsByTagName('html')[0].classList.add('dark');
+    document.body.classList.add('dark:bg-slate-900');
+  }, []);
+
+  // {
+  //   path: '',
+  //   element: <Layouts></Layouts>,
+  //   children: [
+  //     {
+  //       path: '',
+  //       // loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
+  //       element: <Home></Home>,
+  //     },
+  //     {
+  //       path: '/quiz',
+  //       // loader: ({ params }) =>
+  //       //   fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`),
+  //       element: <Quizs></Quizs>,
+  //     },
+  //     {
+  //       path: '/blog',
+  //       element: <Blog></Blog>,
+  //     },
+  //     {
+  //       path: '/Statistics',
+  //       // loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
+  //       element: <Statistics></Statistics>,
+  //     },
+  //   ],
+  // },
+
   return (
     <div className='App'>
       <RouterProvider router={router}></RouterProvider>
