@@ -12,7 +12,7 @@ function QuizCart({
   const [clicked, setclicked] = useState(false);
   useEffect(() => {}, []);
   return (
-    <div className='border border-gray-800 p-8 rounded-md text-slate-300'>
+    <div className='border border-yellow-400 p-8 rounded-md text-slate-300'>
       <h4 className='text-xl mb-4 font-medium text-slate-200'>
         {question}{' '}
         <button>
