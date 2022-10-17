@@ -3,17 +3,19 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
-    <footer className='text-gray-400 dark:bg-gray-800 relative body-font'>
+    <footer className='text-blue-600  bg-yellow-500 relative body-font'>
       <div className='container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col'>
         <Link className='flex title-font font-medium items-center md:justify-start justify-center text-white'>
-          <span className='ml-3 text-xl'>QuizUltra</span>
+          <span className='ml-3 text-xl text-blue-600 font-bold'>
+            QuizUltra
+          </span>
         </Link>
-        <p className='text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4'>
+        <p className='text-sm text-blue-600  sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4'>
           © 2022 Copyrights
         </p>
         <span className='inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start'>
           <a
-            className='text-gray-400'
+            className='text-blue-600 '
             href='https://www.facebook.com'
             target={'_blank'}
           >
@@ -31,7 +33,7 @@ function Footer() {
           <a
             href='https://twitter.com/'
             target={'_blank'}
-            className='ml-3 text-gray-400'
+            className='ml-3 text-blue-600 '
           >
             <svg
               fill='currentColor'
@@ -47,7 +49,7 @@ function Footer() {
           <a
             href={'https://www.instagram.com/akash__ahmmed/'}
             target={'_blank'}
-            className='ml-3 text-gray-400'
+            className='ml-3 text-blue-700 '
           >
             <svg
               fill='none'
@@ -65,7 +67,7 @@ function Footer() {
           <a
             href='https://www.linkedin.com/in/akash-ahmmed-917988192/'
             target={'_blank'}
-            className='ml-3 text-gray-400'
+            className='ml-3 text-blue-700 '
           >
             <svg
               fill='currentColor'
