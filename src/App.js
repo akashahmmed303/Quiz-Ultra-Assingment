@@ -15,15 +15,18 @@ function App() {
       element: <Layouts></Layouts>,
       children: [
         {
+          path: '/',
+          loader: async () => {
+            return fetch('https://openapi.programming-hero.com/api/quiz');
+          },
+          element: <Home></Home>,
+        },
+        {
           path: '/home',
           loader: async () => {
             return fetch('https://openapi.programming-hero.com/api/quiz');
           },
-          element: (
-            <div>
-              <Home></Home>
-            </div>
-          ),
+          element: <Home></Home>,
         },
         {
           path: '/quiz/:id',
@@ -60,33 +63,6 @@ function App() {
     document.getElementsByTagName('html')[0].classList.add('dark');
     document.body.classList.add('dark:bg-slate-900');
   }, []);
-
-  // {
-  //   path: '',
-  //   element: <Layouts></Layouts>,
-  //   children: [
-  //     {
-  //       path: '',
-  //       // loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
-  //       element: <Home></Home>,
-  //     },
-  //     {
-  //       path: '/quiz',
-  //       // loader: ({ params }) =>
-  //       //   fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`),
-  //       element: <Quizs></Quizs>,
-  //     },
-  //     {
-  //       path: '/blog',
-  //       element: <Blog></Blog>,
-  //     },
-  //     {
-  //       path: '/Statistics',
-  //       // loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
-  //       element: <Statistics></Statistics>,
-  //     },
-  //   ],
-  // },
 
   return (
     <div className='App'>
