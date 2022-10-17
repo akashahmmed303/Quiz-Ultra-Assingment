@@ -1,11 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import Correct from '../Correct/Correct';
+import InCorrect from '../InCorrect/InCorrect';
 import QuizCart from '../QuizCart/QuizCart';
+import 'react-toastify/dist/ReactToastify.css';
 
-const Quizs = () => {
+function Quizs() {
+  const [correct, setCorrect] = useState(0);
+  const [inCorrect, setInCorrect] = useState(0);
+  const [selected, setSelected] = useState({});
+  const [correctAnswers, setCorrectAnswers] = useState([]);
   const { data } = useLoaderData();
   const { name, questions } = data;
-  console.log(data);
+  //   console.log(data);
+  useEffect(() => {
+    const correctAnswer = questions.map(obj => obj.correctAnswer);
+    setCorrectAnswers([...correctAnswers, ...correctAnswer]);
+  }, [questions]);
+
+  useEffect(() => {
+    window.scroll({
+      top: 0,
+
+      behavior: 'smooth',
+    });
+  }, []);
 
   const handleCliked = async (text, key) => {
     console.log(handleCliked);
@@ -35,8 +55,10 @@ const Quizs = () => {
           );
         })}
       </div>
+      <Correct correct={correct}></Correct>
+      <ToastContainer />
     </div>
   );
-};
+}
 
 export default Quizs;
